@@ -1,0 +1,50 @@
+import React, {Component} from "react";
+
+class ProjectRow extends Component {
+
+    componentDidMount() {
+        let deleteButton = document.getElementById(`delete${this.props.item.id}`);
+
+        let deleteProject = async function() {
+            let test = await fetch(`/projects/delete/${this.props.item.id}`, {
+                method: 'DELETE',
+                headers: {'Authorization': `Bearer ${sessionStorage.getItem('token')}`},
+            });
+        }
+        deleteProject = deleteProject.bind(this)
+        let refreshButton = document.getElementById("refreshButton");
+
+        deleteButton.onclick = async function () {
+            await deleteProject()
+            refreshButton.click()
+        }
+    }
+
+    render() {
+        return (
+            <tr  key={`row${this.props.item.id}`} className="bg-white border-b hover:bg-gray-50">
+                <td
+                    className="px-6 py-4 text-sm font-medium text-gray-900 whitespace-nowrap">
+                    {this.props.item.id}
+                </td>
+                <td
+                    className="px-6 py-4 text-sm font-medium text-gray-900 whitespace-nowrap">
+                    {this.props.item.name}
+                </td>
+                <td className="px-6 py-4 text-sm font-mono text-gray-500 whitespace-nowrap">
+                    {this.props.item.id}
+                </td>
+                <td className="px-6 py-4 text-sm font-mono text-gray-500 whitespace-nowrap">
+                    {this.props.item.creationDate}
+                </td>
+                <td className="px-6 py-4" id={`delete${this.props.item.id}`}>
+                    <button className="text-sm font-bold text-red-500 rounded">
+                        Delete
+                    </button>
+                </td>
+            </tr>
+        );
+    }
+}
+
+export default ProjectRow;

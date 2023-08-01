@@ -1,0 +1,134 @@
+{
+	"info": {
+		"_postman_id": "9633d6f1-07cb-4f88-ab13-865bc43bf886",
+		"name": "mBaaS FeatureProjectMapping",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "AddMapping",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/f2p/add/1/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"f2p",
+						"add",
+						"1",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Features of Projet",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjpbIlJPTEVfQURNSU4iXSwic3ViIjoicGV0ZXIiLCJpYXQiOjE2NDc0NTQ3OTcsImV4cCI6MTY0NzQ4MzU5N30.hW-1jOdK9zaK7znZuwclxWir-ByKCtRddAD0NEfUkWwvSs6oLMJUs6nrafo_nj3I943XfVS05QVc-I8xfIt2Yw",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/f2p/get/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"f2p",
+						"get",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Mapping",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjpbIlJPTEVfQURNSU4iXSwic3ViIjoicGV0ZXIiLCJpYXQiOjE2NDc0NTQ3OTcsImV4cCI6MTY0NzQ4MzU5N30.hW-1jOdK9zaK7znZuwclxWir-ByKCtRddAD0NEfUkWwvSs6oLMJUs6nrafo_nj3I943XfVS05QVc-I8xfIt2Yw",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/f2p/delete/2/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"f2p",
+						"delete",
+						"2",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllMapping",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjpbIlJPTEVfQURNSU4iXSwic3ViIjoicGV0ZXIiLCJpYXQiOjE2NDc0NTQ3OTcsImV4cCI6MTY0NzQ4MzU5N30.hW-1jOdK9zaK7znZuwclxWir-ByKCtRddAD0NEfUkWwvSs6oLMJUs6nrafo_nj3I943XfVS05QVc-I8xfIt2Yw",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/f2p/all",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"f2p",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete all mappings",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjpbIlJPTEVfQURNSU4iXSwic3ViIjoicGV0ZXIiLCJpYXQiOjE2NDc0NTQ3OTcsImV4cCI6MTY0NzQ4MzU5N30.hW-1jOdK9zaK7znZuwclxWir-ByKCtRddAD0NEfUkWwvSs6oLMJUs6nrafo_nj3I943XfVS05QVc-I8xfIt2Yw",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/f2p/deleteMapping/all",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"f2p",
+						"deleteMapping",
+						"all"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

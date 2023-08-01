@@ -1,0 +1,88 @@
+-- Only for development
+-- DROP TABLE IF EXISTS PROJECT;
+-- DROP TABLE IF EXISTS FEATURE;
+-- DROP TABLE IF EXISTS BACKEND_LOG_EVENT;
+-- DROP TABLE IF EXISTS WEB_LOG_EVENT;
+-- DROP TABLE IF EXISTS MOBILE_LOG_EVENT;
+-- DROP TABLE IF EXISTS MBUSER;
+-- DROP TABLE IF EXISTS FEATURE_PROJECT_MAPPER;
+-- END --
+
+CREATE TABLE IF NOT EXISTS PROJECT (
+    id INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR,
+    creation_date VARCHAR
+);
+
+CREATE TABLE IF NOT EXISTS MBUSER (
+    id INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    username VARCHAR,
+    password VARCHAR,
+    enabled VARCHAR,
+    roles VARCHAR,
+    projectid INTEGER,
+    CONSTRAINT UC_MBUSER UNIQUE (username, projectid)
+    );
+
+CREATE TABLE IF NOT EXISTS FEATURE (
+    id INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    path VARCHAR,
+    creation_date VARCHAR,
+    uri VARCHAR
+);
+
+CREATE TABLE IF NOT EXISTS BACKEND_LOG_EVENT (
+    id INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    identifier VARCHAR,
+    name VARCHAR,
+    description VARCHAR,
+    source VARCHAR,
+    parameters VARCHAR,
+    creation_date VARCHAR,
+    count INTEGER,
+    project VARCHAR,
+    hash INTEGER,
+    api_path VARCHAR
+);
+
+CREATE TABLE IF NOT EXISTS WEB_LOG_EVENT (
+    id INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    identifier VARCHAR,
+    name VARCHAR,
+    description VARCHAR,
+    source VARCHAR,
+    parameters VARCHAR,
+    creation_date VARCHAR,
+    count INTEGER,
+    project VARCHAR,
+    hash INTEGER,
+    browser VARCHAR,
+    locale VARCHAR,
+    web_version VARCHAR,
+    page VARCHAR,
+    operating_system VARCHAR
+);
+
+CREATE TABLE IF NOT EXISTS MOBILE_LOG_EVENT (
+    id INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    identifier VARCHAR,
+    name VARCHAR,
+    description VARCHAR,
+    source VARCHAR,
+    parameters VARCHAR,
+    creation_date VARCHAR,
+    count INTEGER,
+    project VARCHAR,
+    hash INTEGER,
+    screen VARCHAR,
+    locale VARCHAR,
+    app_version VARCHAR,
+    operating_system VARCHAR
+);
+
+CREATE TABLE IF NOT EXISTS FEATURE_PROJECT_MAPPER(
+    id INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    featureid INTEGER,
+    projectid INTEGER
+);
+

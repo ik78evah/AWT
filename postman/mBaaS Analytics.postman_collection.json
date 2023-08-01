@@ -1,0 +1,192 @@
+{
+	"info": {
+		"_postman_id": "c6c9712c-a1cf-485f-8976-0c88d539ba65",
+		"name": "mBaaS Analytics",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all mobile logs",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjpbIlJPTEVfQURNSU4iXSwic3ViIjoicGV0ZXIiLCJpYXQiOjE2NDc0NTQ3OTcsImV4cCI6MTY0NzQ4MzU5N30.hW-1jOdK9zaK7znZuwclxWir-ByKCtRddAD0NEfUkWwvSs6oLMJUs6nrafo_nj3I943XfVS05QVc-I8xfIt2Yw",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/logs/mobile/all",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"logs",
+						"mobile",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all web logs",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjpbIlJPTEVfQURNSU4iXSwic3ViIjoicGV0ZXIiLCJpYXQiOjE2NDc0NTQ3OTcsImV4cCI6MTY0NzQ4MzU5N30.hW-1jOdK9zaK7znZuwclxWir-ByKCtRddAD0NEfUkWwvSs6oLMJUs6nrafo_nj3I943XfVS05QVc-I8xfIt2Yw",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/logs/web/all",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"logs",
+						"web",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all backend logs",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjpbIlJPTEVfQURNSU4iXSwic3ViIjoicGV0ZXIiLCJpYXQiOjE2NDc0NTQ3OTcsImV4cCI6MTY0NzQ4MzU5N30.hW-1jOdK9zaK7znZuwclxWir-ByKCtRddAD0NEfUkWwvSs6oLMJUs6nrafo_nj3I943XfVS05QVc-I8xfIt2Yw",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/logs/backend/all",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"logs",
+						"backend",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create new mobile log",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjpbIlJPTEVfQURNSU4iXSwic3ViIjoicGV0ZXIiLCJpYXQiOjE2NDc0NTQ3OTcsImV4cCI6MTY0NzQ4MzU5N30.hW-1jOdK9zaK7znZuwclxWir-ByKCtRddAD0NEfUkWwvSs6oLMJUs6nrafo_nj3I943XfVS05QVc-I8xfIt2Yw",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"name\": \"New user registered\",\n        \"description\": \"Register a new user\",\n        \"parameters\": {},\n        \"project\": 0,\n        \"operatingSystem\": \"macOS 12\",\n        \"locale\": \"DE-de\",\n        \"appVersion\": \"1.2.3\",\n        \"screen\": \"Login Screen\"\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/logs/mobile/log",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"logs",
+						"mobile",
+						"log"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create new web log",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjpbIlJPTEVfQURNSU4iXSwic3ViIjoicGV0ZXIiLCJpYXQiOjE2NDc0NTQ3OTcsImV4cCI6MTY0NzQ4MzU5N30.hW-1jOdK9zaK7znZuwclxWir-ByKCtRddAD0NEfUkWwvSs6oLMJUs6nrafo_nj3I943XfVS05QVc-I8xfIt2Yw",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"New user registered\",\n    \"description\": \"Register a new user\",\n    \"parameters\": {},\n    \"project\": 0,\n    \"operatingSystem\": \"macOS 12\",\n    \"locale\": \"DE-de\",\n    \"webVersion\": \"1.2.3\",\n    \"page\": \"/login\",\n    \"browser\": \"Safari\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/logs/web/log",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"logs",
+						"web",
+						"log"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create new backend log",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjpbIlJPTEVfQURNSU4iXSwic3ViIjoicGV0ZXIiLCJpYXQiOjE2NDc0NTQ3OTcsImV4cCI6MTY0NzQ4MzU5N30.hW-1jOdK9zaK7znZuwclxWir-ByKCtRddAD0NEfUkWwvSs6oLMJUs6nrafo_nj3I943XfVS05QVc-I8xfIt2Yw",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"New user registered\",\n    \"description\": \"Register a new user\",\n    \"parameters\": {},\n    \"project\": 0,\n    \"apiPath\": \"/login\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/logs/backend/log",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"logs",
+						"backend",
+						"log"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

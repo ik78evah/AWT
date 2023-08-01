@@ -1,0 +1,154 @@
+{
+	"info": {
+		"_postman_id": "afec0d33-b732-4e74-975e-1de1001749ab",
+		"name": "mBaaS Feature",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "AddFeature",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjpbIlJPTEVfQURNSU4iXSwic3ViIjoicGV0ZXIiLCJpYXQiOjE2NDc0NTQ3OTcsImV4cCI6MTY0NzQ4MzU5N30.hW-1jOdK9zaK7znZuwclxWir-ByKCtRddAD0NEfUkWwvSs6oLMJUs6nrafo_nj3I943XfVS05QVc-I8xfIt2Yw",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"path\": \"/demo/**\",\r\n    \"uri\": \"http://127.0.0.1:8181/\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/features/add",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"features",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllFeatures",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjpbIlJPTEVfQURNSU4iXSwic3ViIjoicGV0ZXIiLCJpYXQiOjE2NDc0NTQ3OTcsImV4cCI6MTY0NzQ4MzU5N30.hW-1jOdK9zaK7znZuwclxWir-ByKCtRddAD0NEfUkWwvSs6oLMJUs6nrafo_nj3I943XfVS05QVc-I8xfIt2Yw",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/features/all",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"features",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteFeature",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjpbIlJPTEVfQURNSU4iXSwic3ViIjoicGV0ZXIiLCJpYXQiOjE2NDc0NTQ3OTcsImV4cCI6MTY0NzQ4MzU5N30.hW-1jOdK9zaK7znZuwclxWir-ByKCtRddAD0NEfUkWwvSs6oLMJUs6nrafo_nj3I943XfVS05QVc-I8xfIt2Yw",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/features/delete/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"features",
+						"delete",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Feature",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjpbIlJPTEVfQURNSU4iXSwic3ViIjoicGV0ZXIiLCJpYXQiOjE2NDc0NTQ3OTcsImV4cCI6MTY0NzQ4MzU5N30.hW-1jOdK9zaK7znZuwclxWir-ByKCtRddAD0NEfUkWwvSs6oLMJUs6nrafo_nj3I943XfVS05QVc-I8xfIt2Yw",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"path\": \"/demo/**\",\r\n    \"uri\": \"http://127.0.0.1:8181/\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/features/update/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"features",
+						"update",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Feature",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjpbIlJPTEVfQURNSU4iXSwic3ViIjoicGV0ZXIiLCJpYXQiOjE2NDc0NTQ3OTcsImV4cCI6MTY0NzQ4MzU5N30.hW-1jOdK9zaK7znZuwclxWir-ByKCtRddAD0NEfUkWwvSs6oLMJUs6nrafo_nj3I943XfVS05QVc-I8xfIt2Yw",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/features/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"features",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

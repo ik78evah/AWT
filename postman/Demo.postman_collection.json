@@ -1,0 +1,137 @@
+{
+	"info": {
+		"_postman_id": "5f92e6fd-95f3-4a0b-8868-3ab7f7fa56ac",
+		"name": "Demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Tom",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjpbIlJPTEVfVVNFUiJdLCJzdWIiOiJ0b20iLCJpYXQiOjE2NDc0NjM5MDEsImV4cCI6MTY0NzQ5MjcwMX0.Y9htC-rcRUnSq7mPPpNdUwK6tFSWi2MOVG1aKe-Fnz2ZL0ZIB8VrG_G3fbphjeVItnQM4vNotqNtndhrUqOKWw",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/demo/all",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"demo",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add ToDo Tom",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjpbIlJPTEVfVVNFUiJdLCJzdWIiOiJoYW5zIiwiaWF0IjoxNjQ3NDY0OTk2LCJleHAiOjE2NDc0OTM3OTZ9.oBCfrUB6qmmiFJyUOT6U9Sjv3Rv9LlEZbNUUfKH04uIZDf-X1w8biYfPUXwJC0hu3HPwBQcRfVnvZUI-8MzKNg",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/demo/add/test",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"demo",
+						"add",
+						"test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Completed Tom",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjpbIlJPTEVfVVNFUiJdLCJzdWIiOiJoYW5zIiwiaWF0IjoxNjQ3NDY0OTk2LCJleHAiOjE2NDc0OTM3OTZ9.oBCfrUB6qmmiFJyUOT6U9Sjv3Rv9LlEZbNUUfKH04uIZDf-X1w8biYfPUXwJC0hu3HPwBQcRfVnvZUI-8MzKNg",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/demo/allCompleted",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"demo",
+						"allCompleted"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Set Completed Tom",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjpbIlJPTEVfVVNFUiJdLCJzdWIiOiJoYW5zIiwiaWF0IjoxNjQ3NDY0OTk2LCJleHAiOjE2NDc0OTM3OTZ9.oBCfrUB6qmmiFJyUOT6U9Sjv3Rv9LlEZbNUUfKH04uIZDf-X1w8biYfPUXwJC0hu3HPwBQcRfVnvZUI-8MzKNg",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/demo/setCompleted/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"demo",
+						"setCompleted",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Todo tom",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjpbIlJPTEVfVVNFUiJdLCJzdWIiOiJoYW5zIiwiaWF0IjoxNjQ3NDY0OTk2LCJleHAiOjE2NDc0OTM3OTZ9.oBCfrUB6qmmiFJyUOT6U9Sjv3Rv9LlEZbNUUfKH04uIZDf-X1w8biYfPUXwJC0hu3HPwBQcRfVnvZUI-8MzKNg",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/demo/delete/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"demo",
+						"delete",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

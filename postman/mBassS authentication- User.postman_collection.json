@@ -1,0 +1,376 @@
+{
+	"info": {
+		"_postman_id": "820105e3-ac28-4ba2-8bd8-83d0f76bd45d",
+		"name": "mBassS authentication/ User",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add Tom mit Project id 1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"username\" : \"tom\",\r\n   \"password\" : \"password\",\r\n   \"enabled\" : \"true\",\r\n   \"roles\" : \"ROLE_USER\",\r\n   \"projectid\" : 1 \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Ute mit Project id 2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"username\" : \"ute\",\r\n   \"password\" : \"password\",\r\n   \"enabled\" : \"true\",\r\n   \"roles\" : \"ROLE_USER\",\r\n   \"projectid\" : 2 \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Peter as Admin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"username\" : \"peter\",\r\n   \"password\" : \"password\",\r\n   \"enabled\" : \"true\",\r\n   \"roles\" : \"ROLE_ADMIN\",\r\n   \"projectid\" : 0 \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User by Username Peter",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjpbIlJPTEVfQURNSU4iXSwic3ViIjoicGV0ZXIiLCJpYXQiOjE2NDc0NTQ3OTcsImV4cCI6MTY0NzQ4MzU5N30.hW-1jOdK9zaK7znZuwclxWir-ByKCtRddAD0NEfUkWwvSs6oLMJUs6nrafo_nj3I943XfVS05QVc-I8xfIt2Yw",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/user/getUsername/tom",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"getUsername",
+						"tom"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all users by Peter",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjpbIlJPTEVfQURNSU4iXSwic3ViIjoicGV0ZXIiLCJpYXQiOjE2NDc0NTQ3OTcsImV4cCI6MTY0NzQ4MzU5N30.hW-1jOdK9zaK7znZuwclxWir-ByKCtRddAD0NEfUkWwvSs6oLMJUs6nrafo_nj3I943XfVS05QVc-I8xfIt2Yw",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/user/getAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"getAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update user by Peter",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjpbIlJPTEVfQURNSU4iXSwic3ViIjoicGV0ZXIiLCJpYXQiOjE2NDc0NTQ3OTcsImV4cCI6MTY0NzQ4MzU5N30.hW-1jOdK9zaK7znZuwclxWir-ByKCtRddAD0NEfUkWwvSs6oLMJUs6nrafo_nj3I943XfVS05QVc-I8xfIt2Yw",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"ute\",\r\n    \"password\" : \"password\",\r\n    \"enabled\" : \"true\",\r\n    \"roles\" : \"ROLE_USER\",\r\n    \"projectId\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/update/7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"update",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get user by ID by Peter",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjpbIlJPTEVfQURNSU4iXSwic3ViIjoicGV0ZXIiLCJpYXQiOjE2NDc0NTQ3OTcsImV4cCI6MTY0NzQ4MzU5N30.hW-1jOdK9zaK7znZuwclxWir-ByKCtRddAD0NEfUkWwvSs6oLMJUs6nrafo_nj3I943XfVS05QVc-I8xfIt2Yw",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/user/getId/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"getId",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login tom",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"tom\",\r\n    \"password\": \"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login ute",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"ute\",\r\n    \"password\": \"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login peter",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "ProjectId",
+						"value": "0",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"peter\",\r\n    \"password\": \"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User by Id by Peter",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/user/deleteId/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"deleteId",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete user by username by Peter",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjpbIlJPTEVfQURNSU4iXSwic3ViIjoicGV0ZXIiLCJpYXQiOjE2NDc0NTQ3OTcsImV4cCI6MTY0NzQ4MzU5N30.hW-1jOdK9zaK7znZuwclxWir-ByKCtRddAD0NEfUkWwvSs6oLMJUs6nrafo_nj3I943XfVS05QVc-I8xfIt2Yw",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/user/deleteUsername/ute",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"deleteUsername",
+						"ute"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/user/deleteAll",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjpbIlJPTEVfQURNSU4iXSwic3ViIjoicGV0ZXIiLCJpYXQiOjE2NDc0NTQ3OTcsImV4cCI6MTY0NzQ4MzU5N30.hW-1jOdK9zaK7znZuwclxWir-ByKCtRddAD0NEfUkWwvSs6oLMJUs6nrafo_nj3I943XfVS05QVc-I8xfIt2Yw",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/user/deleteAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"deleteAll"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

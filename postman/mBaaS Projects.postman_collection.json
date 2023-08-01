@@ -1,0 +1,132 @@
+{
+	"info": {
+		"_postman_id": "0de06b08-1a84-451b-b696-60ceba992682",
+		"name": "mBaaS Projects",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "AddProject",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjpbIlJPTEVfQURNSU4iXSwic3ViIjoicGV0ZXIiLCJpYXQiOjE2NDc0NTQ3OTcsImV4cCI6MTY0NzQ4MzU5N30.hW-1jOdK9zaK7znZuwclxWir-ByKCtRddAD0NEfUkWwvSs6oLMJUs6nrafo_nj3I943XfVS05QVc-I8xfIt2Yw",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/projects/add/test1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"projects",
+						"add",
+						"test1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteProject",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjpbIlJPTEVfQURNSU4iXSwic3ViIjoicGV0ZXIiLCJpYXQiOjE2NDc0NTQ3OTcsImV4cCI6MTY0NzQ4MzU5N30.hW-1jOdK9zaK7znZuwclxWir-ByKCtRddAD0NEfUkWwvSs6oLMJUs6nrafo_nj3I943XfVS05QVc-I8xfIt2Yw",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/projects/delete/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"projects",
+						"delete",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllProjects",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjpbIlJPTEVfQURNSU4iXSwic3ViIjoicGV0ZXIiLCJpYXQiOjE2NDc0NTQ3OTcsImV4cCI6MTY0NzQ4MzU5N30.hW-1jOdK9zaK7znZuwclxWir-ByKCtRddAD0NEfUkWwvSs6oLMJUs6nrafo_nj3I943XfVS05QVc-I8xfIt2Yw",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/projects/all",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"projects",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Project",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/projects/update/1/test2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"projects",
+						"update",
+						"1",
+						"test2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Project",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjpbIlJPTEVfQURNSU4iXSwic3ViIjoicGV0ZXIiLCJpYXQiOjE2NDc0NTQ3OTcsImV4cCI6MTY0NzQ4MzU5N30.hW-1jOdK9zaK7znZuwclxWir-ByKCtRddAD0NEfUkWwvSs6oLMJUs6nrafo_nj3I943XfVS05QVc-I8xfIt2Yw",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/projects/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"projects",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
